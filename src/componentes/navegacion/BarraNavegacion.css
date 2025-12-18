@@ -1,0 +1,147 @@
+/* Estilos para la barra de navegación */
+.barra-navegacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.barra-navegacion.con-sombra {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-navegacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu-navegacion {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.enlace-navegacion {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.enlace-navegacion:hover {
+  color: #3b82f6;
+}
+
+.enlace-navegacion::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.enlace-navegacion:hover::after {
+  width: 100%;
+}
+
+.boton-menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.icono-hamburguesa {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.icono-hamburguesa::before,
+.icono-hamburguesa::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.icono-hamburguesa::before {
+  top: -8px;
+}
+
+.icono-hamburguesa::after {
+  bottom: -8px;
+}
+
+.icono-hamburguesa.abierto {
+  background: transparent;
+}
+
+.icono-hamburguesa.abierto::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.icono-hamburguesa.abierto::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .boton-menu-mobile {
+    display: block;
+  }
+
+  .menu-navegacion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .menu-navegacion.menu-abierto {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

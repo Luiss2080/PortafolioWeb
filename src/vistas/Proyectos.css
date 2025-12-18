@@ -1,0 +1,62 @@
+/* Estilos para la vista de proyectos */
+.vista-proyectos {
+  min-height: calc(100vh - 80px);
+  padding: 6rem 2rem 4rem;
+}
+
+.contenedor-proyectos {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-seccion {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  margin: 0 0 1rem 0;
+}
+
+.descripcion-seccion {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.seccion-destacados,
+.seccion-otros {
+  margin-bottom: 4rem;
+}
+
+.subtitulo-seccion {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0 0 2rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .vista-proyectos {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}

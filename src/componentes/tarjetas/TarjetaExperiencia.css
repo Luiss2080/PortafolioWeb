@@ -1,0 +1,130 @@
+/* Estilos para tarjeta de experiencia */
+.tarjeta-experiencia {
+  position: relative;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 3px solid #3b82f6;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-experiencia:hover {
+  border-left-color: #8b5cf6;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+  transform: translateX(10px);
+}
+
+.timeline-punto {
+  position: absolute;
+  left: -2.5rem;
+  top: 2rem;
+  width: 1rem;
+  height: 1rem;
+  background: #3b82f6;
+  border-radius: 50%;
+  border: 3px solid #0f172a;
+}
+
+.timeline-punto::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #60a5fa;
+  border-radius: 50%;
+}
+
+.contenido-experiencia {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.header-experiencia {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.puesto-experiencia {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.periodo-experiencia {
+  color: #60a5fa;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 20px;
+}
+
+.empresa-experiencia {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin: 0;
+  font-weight: 600;
+}
+
+.descripcion-experiencia {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lista-logros {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.lista-logros li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.lista-logros li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+.tecnologias-experiencia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.badge-tech {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-experiencia {
+    margin-left: 1rem;
+  }
+
+  .timeline-punto {
+    left: -1.5rem;
+  }
+}
