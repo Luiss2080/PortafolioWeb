@@ -12,6 +12,9 @@ export * from './comunes';
 // Componentes de formularios
 export * from './formularios';
 
+// Componentes de layouts
+export * from './layouts';
+
 // Componentes de modales
 export * from './modales';
 
