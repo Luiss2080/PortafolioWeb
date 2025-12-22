@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BarraNavegacion from './componentes/navegacion/BarraNavegacion';
-import PiePagina from './componentes/navegacion/PiePagina';
-import Inicio from './vistas/Inicio';
-import SobreMi from './vistas/SobreMi';
-import Proyectos from './vistas/Proyectos';
-import Habilidades from './vistas/Habilidades';
-import Experiencia from './vistas/Experiencia';
-import Contacto from './vistas/Contacto';
+import BarraNavegacion from './componentes/navegacion/BarraNavegacion.jsx';
+import PiePagina from './componentes/navegacion/PiePagina.jsx';
+import Inicio from './vistas/Inicio.jsx';
+import SobreMi from './vistas/SobreMi.jsx';
+import Proyectos from './vistas/Proyectos.jsx';
+import Habilidades from './vistas/Habilidades.jsx';
+import Experiencia from './vistas/Experiencia.jsx';
+import Contacto from './vistas/Contacto.jsx';
 import { RUTAS } from './configuracion/rutas';
 import './App.css';
 
