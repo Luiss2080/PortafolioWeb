@@ -1,7 +1,7 @@
 // Componente de tarjeta de habilidad
 import React from 'react';
 import { motion } from 'framer-motion';
-import './TarjetaHabilidad.css';
+import './estilos/TarjetaHabilidad.css';
 
 const TarjetaHabilidad = ({ habilidad, delay = 0 }) => {
   const { nombre, nivel, icono } = habilidad;

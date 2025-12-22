@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { REDES_SOCIALES } from '../../configuracion/constantes';
-import './PiePagina.css';
+import './estilos/PiePagina.css';
 
 const PiePagina = () => {
   const añoActual = new Date().getFullYear();

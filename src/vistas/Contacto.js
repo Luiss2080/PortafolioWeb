@@ -3,7 +3,7 @@ import React from 'react';
 import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import FormularioContacto from '../componentes/formularios/FormularioContacto';
 import { REDES_SOCIALES } from '../configuracion/constantes';
-import './Contacto.css';
+import './estilos/Contacto.css';
 
 const Contacto = () => {
   return (

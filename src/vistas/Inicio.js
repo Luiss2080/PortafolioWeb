@@ -6,7 +6,7 @@ import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import Cargador from '../componentes/animaciones/Cargador';
 import { obtenerPerfil, obtenerEstadisticas } from '../logica/servicios/githubService';
 import { useGitHub } from '../logica/hooks';
-import './Inicio.css';
+import './estilos/Inicio.css';
 
 const Inicio = () => {
   const { datos: perfil, cargando: cargandoPerfil } = useGitHub(obtenerPerfil);

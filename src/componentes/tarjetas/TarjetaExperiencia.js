@@ -1,7 +1,7 @@
 // Componente de tarjeta de experiencia
 import React from 'react';
 import { motion } from 'framer-motion';
-import './TarjetaExperiencia.css';
+import './estilos/TarjetaExperiencia.css';
 
 const TarjetaExperiencia = ({ experiencia, index }) => {
   const { empresa, puesto, periodo, descripcion, logros, tecnologias } = experiencia;

@@ -3,7 +3,7 @@ import React from 'react';
 import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import TarjetaExperiencia from '../componentes/tarjetas/TarjetaExperiencia';
 import { experienciaLaboral } from '../datos/experiencia';
-import './Experiencia.css';
+import './estilos/Experiencia.css';
 
 const Experiencia = () => {
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import { sobreMi, informacionPersonal } from '../datos/perfil';
-import './SobreMi.css';
+import './estilos/SobreMi.css';
 
 const SobreMi = () => {
   return (

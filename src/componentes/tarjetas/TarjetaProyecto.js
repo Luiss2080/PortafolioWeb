@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { animacionEscala } from '../../configuracion/animaciones';
-import './TarjetaProyecto.css';
+import './estilos/TarjetaProyecto.css';
 
 const TarjetaProyecto = ({ proyecto }) => {
   const { 

@@ -1,7 +1,7 @@
 // Componente de cargador animado
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Cargador.css';
+import './estilos/Cargador.css';
 
 const Cargador = ({ mensaje = 'Cargando...' }) => {
   return (

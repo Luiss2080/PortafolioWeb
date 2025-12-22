@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useFormulario } from '../../logica/hooks/useFormulario';
 import { validarEmail, validarNombre, validarMensaje } from '../../logica/utilidades/validaciones';
 import { enviarEmailContacto } from '../../logica/servicios/emailService';
-import './FormularioContacto.css';
+import './estilos/FormularioContacto.css';
 
 const FormularioContacto = () => {
   const [enviando, setEnviando] = useState(false);

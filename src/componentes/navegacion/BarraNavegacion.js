@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { RUTAS_ARRAY } from '../../configuracion/rutas';
 import { useAnimacionScroll } from '../../logica/hooks/useAnimacionScroll';
-import './BarraNavegacion.css';
+import './estilos/BarraNavegacion.css';
 
 const BarraNavegacion = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);

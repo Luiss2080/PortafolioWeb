@@ -3,7 +3,7 @@ import React from 'react';
 import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import TarjetaHabilidad from '../componentes/tarjetas/TarjetaHabilidad';
 import { habilidadesTecnicas } from '../datos/habilidades';
-import './Habilidades.css';
+import './estilos/Habilidades.css';
 
 const Habilidades = () => {
   return (

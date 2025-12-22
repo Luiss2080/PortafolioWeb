@@ -5,7 +5,7 @@ import TarjetaProyecto from '../componentes/tarjetas/TarjetaProyecto';
 import Cargador from '../componentes/animaciones/Cargador';
 import { obtenerRepositorios } from '../logica/servicios/githubService';
 import { useGitHub } from '../logica/hooks';
-import './Proyectos.css';
+import './estilos/Proyectos.css';
 
 const Proyectos = () => {
   const { datos: repositorios, cargando, error } = useGitHub(
