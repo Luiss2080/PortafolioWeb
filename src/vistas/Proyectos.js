@@ -1,5 +1,5 @@
 // Vista de Proyectos - Conectada a GitHub
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
 import TarjetaProyecto from '../componentes/tarjetas/TarjetaProyecto';
 import Cargador from '../componentes/animaciones/Cargador';
