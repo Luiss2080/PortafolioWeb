@@ -20,7 +20,7 @@ const Header = ({
   const [typedText, setTypedText] = useState('');
   const { datos: perfilGithub, cargando } = useGitHub(obtenerPerfil);
 
-  // Combinar datos de GitHub con datos estáticos
+  // Combinar datos de GitHub con datos estÃ¡ticos
   const perfil = {
     nombre: perfilGithub?.nombre || informacionPersonal.nombre,
     bio: perfilGithub?.bio || informacionPersonal.titulo,
@@ -32,7 +32,7 @@ const Header = ({
 
   const textoAnimado = subtitulo || informacionPersonal.subtitulo;
 
-  // Efecto de escritura automática
+  // Efecto de escritura automÃ¡tica
   useEffect(() => {
     if (textoAnimado) {
       let index = 0;
@@ -73,7 +73,7 @@ const Header = ({
         <div className="header-glow"></div>
       </div>
 
-      {/* Partículas flotantes */}
+      {/* PartÃ­culas flotantes */}
       {mostrarParticulas && (
         <div className="header-particulas">
           {particulas.map((particula) => (
@@ -81,11 +81,11 @@ const Header = ({
               key={particula.id}
               className="particula"
               style={{
-                left: ${particula.left}%,
-                animationDelay: ${particula.delay}s,
-                animationDuration: ${particula.duration}s,
-                width: ${particula.size}px,
-                height: ${particula.size}px,
+                left: `${particula.left}%`,
+                animationDelay: `${particula.delay}s`,
+                animationDuration: `${particula.duration}s`,
+                width: `${particula.size}px`,
+                height: `${particula.size}px`,
                 opacity: particula.opacity
               }}
             />
@@ -180,7 +180,7 @@ const Header = ({
                     <div className="card-stats">
                       <div className="stat-item">
                         <span className="stat-value">3+</span>
-                        <span className="stat-label">Años Exp.</span>
+                        <span className="stat-label">AÃ±os Exp.</span>
                       </div>
                       <div className="stat-item">
                         <span className="stat-value">20+</span>
