@@ -1,9 +1,9 @@
 // Vista de Habilidades
 import React from 'react';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import TarjetaHabilidad from '../componentes/tarjetas/TarjetaHabilidad';
-import { habilidadesTecnicas } from '../datos/habilidades';
-import './estilos/Habilidades.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import TarjetaHabilidad from '../../componentes/tarjetas/TarjetaHabilidad.jsx';
+import { habilidadesTecnicas } from '../../datos/habilidades';
+import './Habilidades.css';
 
 const Habilidades = () => {
   return (

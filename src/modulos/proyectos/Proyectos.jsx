@@ -1,11 +1,11 @@
 // Vista de Proyectos - Conectada a GitHub
 import React, { useState } from 'react';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import TarjetaProyecto from '../componentes/tarjetas/TarjetaProyecto';
-import Cargador from '../componentes/animaciones/Cargador';
-import { obtenerRepositorios } from '../logica/servicios/githubService';
-import { useGitHub } from '../logica/hooks';
-import './estilos/Proyectos.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import TarjetaProyecto from '../../componentes/tarjetas/TarjetaProyecto.jsx';
+import Cargador from '../../componentes/animaciones/Cargador.jsx';
+import { obtenerRepositorios } from '../../logica/servicios/githubService';
+import { useGitHub } from '../../logica/hooks';
+import './Proyectos.css';
 
 const Proyectos = () => {
   const { datos: repositorios, cargando, error } = useGitHub(

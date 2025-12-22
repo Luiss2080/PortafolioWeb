@@ -1,9 +1,9 @@
 // Vista de Sobre Mí
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import { sobreMi, informacionPersonal } from '../datos/perfil';
-import './estilos/SobreMi.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import { sobreMi, informacionPersonal } from '../../datos/perfil';
+import './SobreMi.css';
 
 const SobreMi = () => {
   return (

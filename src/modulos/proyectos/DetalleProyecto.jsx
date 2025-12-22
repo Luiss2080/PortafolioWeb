@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaStar, FaCodeBranch, FaArrowLeft, FaCalendar, FaCode } from 'react-icons/fa';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado.jsx';
-import Cargador from '../componentes/animaciones/Cargador.jsx';
-import { obtenerRepositorio } from '../logica/servicios/githubService';
-import './estilos/DetalleProyecto.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import Cargador from '../../componentes/animaciones/Cargador.jsx';
+import { obtenerRepositorio } from '../../logica/servicios/githubService';
+import './DetalleProyecto.css';
 
 const DetalleProyecto = () => {
   const { nombreRepo } = useParams();

@@ -1,9 +1,9 @@
 // Vista de Experiencia
 import React from 'react';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import TarjetaExperiencia from '../componentes/tarjetas/TarjetaExperiencia';
-import { experienciaLaboral } from '../datos/experiencia';
-import './estilos/Experiencia.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import TarjetaExperiencia from '../../componentes/tarjetas/TarjetaExperiencia.jsx';
+import { experienciaLaboral } from '../../datos/experiencia';
+import './Experiencia.css';
 
 const Experiencia = () => {
   return (

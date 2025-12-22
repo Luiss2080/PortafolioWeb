@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import Cargador from '../componentes/animaciones/Cargador';
-import { obtenerPerfil, obtenerEstadisticas } from '../logica/servicios/githubService';
-import { useGitHub } from '../logica/hooks';
-import './estilos/Inicio.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import Cargador from '../../componentes/animaciones/Cargador.jsx';
+import { obtenerPerfil, obtenerEstadisticas } from '../../logica/servicios/githubService';
+import { useGitHub } from '../../logica/hooks';
+import './Inicio.css';
 
 const Inicio = () => {
   const { datos: perfil, cargando: cargandoPerfil } = useGitHub(obtenerPerfil);

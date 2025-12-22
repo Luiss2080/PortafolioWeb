@@ -1,9 +1,9 @@
 // Vista de Contacto
 import React from 'react';
-import ContenedorAnimado from '../componentes/animaciones/ContenedorAnimado';
-import FormularioContacto from '../componentes/formularios/FormularioContacto';
-import { REDES_SOCIALES } from '../configuracion/constantes';
-import './estilos/Contacto.css';
+import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
+import FormularioContacto from '../../componentes/formularios/FormularioContacto.jsx';
+import { REDES_SOCIALES } from '../../configuracion/constantes';
+import './Contacto.css';
 
 const Contacto = () => {
   return (
