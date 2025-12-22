@@ -4,3 +4,4 @@ export { useTamañoVentana } from './useTamañoVentana';
 export { useFormulario } from './useFormulario';
 export { useTemaOscuro } from './useTemaOscuro';
 export { useInterseccion } from './useInterseccion';
+export { useGitHub } from './useGitHub';
