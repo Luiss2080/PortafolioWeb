@@ -189,6 +189,50 @@ export const obtenerProyectosDestacados = async (limite = 6) => {
 };
 
 /**
+ * Obtiene información detallada de un repositorio específico
+ * @param {string} nombreRepo - Nombre del repositorio
+ * @returns {Promise<Object>} Datos del repositorio
+ */
+export const obtenerRepositorio = async (nombreRepo) => {
+  try {
+    const response = await fetch(
+      `${GITHUB_API_URL}/repos/${GITHUB_USERNAME}/${nombreRepo}`
+    );
+    
+    if (!response.ok) {
+      throw new Error(`Error al obtener repositorio: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return {
+      id: data.id,
+      nombre: data.name,
+      nombreCompleto: data.full_name,
+      descripcion: data.description,
+      url: data.html_url,
+      urlClone: data.clone_url,
+      homepage: data.homepage,
+      lenguaje: data.language,
+      estrellas: data.stargazers_count,
+      forks: data.forks_count,
+      observadores: data.watchers_count,
+      temas: data.topics || [],
+      fechaCreacion: data.created_at,
+      fechaActualizacion: data.updated_at,
+      esPrivado: data.private,
+      esFork: data.fork,
+      licencia: data.license?.name,
+      tamaño: data.size,
+      ramaDefault: data.default_branch,
+      abiertosIssues: data.open_issues_count
+    };
+  } catch (error) {
+    console.error('Error al obtener repositorio:', error);
+    throw error;
+  }
+};
+
+/**
  * Obtiene los commits recientes de un repositorio
  * @param {string} nombreRepo - Nombre del repositorio
  * @param {number} limite - Número de commits a obtener
@@ -222,6 +266,7 @@ export const obtenerCommitsRecientes = async (nombreRepo, limite = 5) => {
 const githubService = {
   obtenerPerfil,
   obtenerRepositorios,
+  obtenerRepositorio,
   obtenerLenguajesRepo,
   obtenerEstadisticas,
   obtenerProyectosDestacados,

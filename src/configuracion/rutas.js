@@ -3,6 +3,7 @@ export const RUTAS = {
   INICIO: '/',
   SOBRE_MI: '/sobre-mi',
   PROYECTOS: '/proyectos',
+  PROYECTO_DETALLE: '/proyectos/:nombreRepo',
   HABILIDADES: '/habilidades',
   EXPERIENCIA: '/experiencia',
   CONTACTO: '/contacto'
