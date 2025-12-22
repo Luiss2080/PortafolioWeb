@@ -12,29 +12,36 @@ import { RUTAS } from './configuracion/rutas';
 import { useScrollToTop } from './logica/hooks';
 import './App.css';
 
-function App() {
+// Componente interno que usa el hook dentro del Router
+function AppContent() {
   // Scroll automático al tope en cada cambio de ruta
   useScrollToTop();
 
   return (
-    <Router>
-      <div className="app-contenedor">
-        <BarraNavegacion />
-        
-        <main className="contenido-principal">
-          <Routes>
-            <Route path={RUTAS.INICIO} element={<Inicio />} />
-            <Route path={RUTAS.SOBRE_MI} element={<SobreMi />} />
-            <Route path={RUTAS.PROYECTOS} element={<Proyectos />} />
-            <Route path={RUTAS.PROYECTO_DETALLE} element={<DetalleProyecto />} />
-            <Route path={RUTAS.HABILIDADES} element={<Habilidades />} />
-            <Route path={RUTAS.EXPERIENCIA} element={<Experiencia />} />
-            <Route path={RUTAS.CONTACTO} element={<Contacto />} />
-          </Routes>
-        </main>
+    <div className="app-contenedor">
+      <BarraNavegacion />
+      
+      <main className="contenido-principal">
+        <Routes>
+          <Route path={RUTAS.INICIO} element={<Inicio />} />
+          <Route path={RUTAS.SOBRE_MI} element={<SobreMi />} />
+          <Route path={RUTAS.PROYECTOS} element={<Proyectos />} />
+          <Route path={RUTAS.PROYECTO_DETALLE} element={<DetalleProyecto />} />
+          <Route path={RUTAS.HABILIDADES} element={<Habilidades />} />
+          <Route path={RUTAS.EXPERIENCIA} element={<Experiencia />} />
+          <Route path={RUTAS.CONTACTO} element={<Contacto />} />
+        </Routes>
+      </main>
 
-        <PiePagina />
-      </div>
+      <PiePagina />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
