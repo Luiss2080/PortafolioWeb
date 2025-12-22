@@ -32,3 +32,6 @@ Crear un portafolio personal profesional que:
 - **Fecha de Creación**: Diciembre 2025
 - **Estado**: En Desarrollo
 - **Licencia**: MIT
+
+
+{npm start}
