@@ -1,22 +1,24 @@
-/* Estilos para la barra de navegación */
+/* Estilos para la barra de navegación - Tema oscuro/rojo */
 .barra-navegacion {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.1);
 }
 
 .barra-navegacion.con-sombra {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+  border-bottom-color: rgba(255, 0, 0, 0.3);
 }
 
 .contenedor-navegacion {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -31,10 +33,15 @@
 .logo-texto {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #ff0000, #ff6666);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: all 0.3s;
+}
+
+.logo:hover .logo-texto {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
 }
 
 .menu-navegacion {
@@ -44,15 +51,16 @@
 }
 
 .enlace-navegacion {
-  color: #e2e8f0;
+  color: #b0b0b0;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  padding: 0.5rem 0;
 }
 
 .enlace-navegacion:hover {
-  color: #3b82f6;
+  color: #ff0000;
 }
 
 .enlace-navegacion::after {
@@ -62,11 +70,19 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #3b82f6;
+  background: linear-gradient(90deg, #ff0000, #ff6666);
   transition: width 0.3s ease;
 }
 
 .enlace-navegacion:hover::after {
+  width: 100%;
+}
+
+.enlace-navegacion.activo {
+  color: #ff0000;
+}
+
+.enlace-navegacion.activo::after {
   width: 100%;
 }
 
@@ -82,7 +98,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background: #e2e8f0;
+  background: #ffffff;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -93,7 +109,7 @@
   position: absolute;
   width: 25px;
   height: 2px;
-  background: #e2e8f0;
+  background: #ffffff;
   transition: all 0.3s ease;
 }
 
@@ -112,11 +128,13 @@
 .icono-hamburguesa.abierto::before {
   transform: rotate(45deg);
   top: 0;
+  background: #ff0000;
 }
 
 .icono-hamburguesa.abierto::after {
   transform: rotate(-45deg);
   bottom: 0;
+  background: #ff0000;
 }
 
 @media (max-width: 768px) {
@@ -129,7 +147,8 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.98);
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
