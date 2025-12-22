@@ -2,7 +2,7 @@
 import React from 'react';
 import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
 import TarjetaExperiencia from '../../componentes/tarjetas/TarjetaExperiencia.jsx';
-import { experienciaLaboral } from '../../datos/experiencia';
+import { experienciaLaboral } from '../../datos/estaticos/experiencia';
 import './Experiencia.css';
 
 const Experiencia = () => {

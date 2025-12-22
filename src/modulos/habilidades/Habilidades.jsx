@@ -2,7 +2,7 @@
 import React from 'react';
 import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
 import TarjetaHabilidad from '../../componentes/tarjetas/TarjetaHabilidad.jsx';
-import { habilidadesTecnicas } from '../../datos/habilidades';
+import { habilidadesTecnicas } from '../../datos/estaticos/habilidades';
 import './Habilidades.css';
 
 const Habilidades = () => {
