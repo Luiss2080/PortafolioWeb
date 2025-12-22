@@ -1,4 +1,4 @@
-// Vista de Inicio/Home - Con estadÌsticas de GitHub
+// Vista de Inicio/Home - Con estad√≠sticas de GitHub
 import React from 'react';
 import { motion } from 'framer-motion';
 import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
@@ -16,10 +16,10 @@ const Inicio = () => {
       <Header />
       
       <div className="contenido-inicio" style={{ padding: '4rem 2rem' }}>
-        {/* EstadÌsticas */}
+        {/* Estad√≠sticas */}
         {cargandoStats ? (
           <div className="estadisticas-cargando">
-            <Cargador texto="Cargando estadÌsticas..." />
+            <Cargador texto="Cargando estad√≠sticas..." />
           </div>
         ) : estadisticas && (
           <>
@@ -62,7 +62,7 @@ const Inicio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                <h3 className="seccion-titulo">Lenguajes m·s usados</h3>
+                <h3 className="seccion-titulo">Lenguajes m√°s usados</h3>
                 <div className="lenguajes-lista">
                   {estadisticas.lenguajesPrincipales.map((item, index) => (
                     <div key={index} className="lenguaje-item">
@@ -74,7 +74,7 @@ const Inicio = () => {
                         <div 
                           className="lenguaje-progreso" 
                           style={{ 
-                            width: ${(item.cantidad / estadisticas.totalRepositorios) * 100}% 
+                            width: `${(item.cantidad / estadisticas.totalRepositorios) * 100}%` 
                           }}
                         />
                       </div>
@@ -92,7 +92,7 @@ const Inicio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
               >
-                <h3 className="seccion-titulo"> Proyecto m·s popular</h3>
+                <h3 className="seccion-titulo"> Proyecto m√°s popular</h3>
                 <a 
                   href={estadisticas.repositorioMasEstrellado.url}
                   target="_blank"
@@ -106,7 +106,7 @@ const Inicio = () => {
                       <span> {estadisticas.repositorioMasEstrellado.forks}</span>
                     </div>
                   </div>
-                  <p>{estadisticas.repositorioMasEstrellado.descripcion || 'Sin descripciÛn'}</p>
+                  <p>{estadisticas.repositorioMasEstrellado.descripcion || 'Sin descripci√≥n'}</p>
                   {estadisticas.repositorioMasEstrellado.lenguaje && (
                     <span className="lenguaje-badge-mini">
                       {estadisticas.repositorioMasEstrellado.lenguaje}
