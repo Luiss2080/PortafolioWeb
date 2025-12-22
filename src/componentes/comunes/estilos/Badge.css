@@ -1,0 +1,74 @@
+/* Estilos para Badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Tipos */
+.badge-default {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-primary {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.badge-success {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+.badge-warning {
+  background: rgba(255, 165, 0, 0.1);
+  color: #ffa500;
+  border: 1px solid #ffa500;
+}
+
+.badge-info {
+  background: rgba(0, 191, 255, 0.1);
+  color: #00bfff;
+  border: 1px solid #00bfff;
+}
+
+/* Tamaños */
+.badge-small {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.badge-medium {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.badge-large {
+  padding: 0.35rem 1rem;
+  font-size: 1rem;
+}
+
+/* Icono */
+.badge-icono {
+  display: flex;
+  align-items: center;
+}
+
+.badge-texto {
+  line-height: 1;
+}
+
+/* Hover */
+.badge:hover {
+  transform: translateY(-2px);
+}
