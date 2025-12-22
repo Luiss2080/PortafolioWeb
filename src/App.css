@@ -1,39 +1,23 @@
-/* Estilos principales de la aplicación */
+/* Estilos principales de la aplicación - Tema oscuro/rojo */
 .app-contenedor {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background: #000000;
 }
 
 .contenido-principal {
   flex: 1;
-  padding-top: 70px;
+  padding-top: 80px;
+  background: #000000;
 }
 
 /* Utilidades globales */
 .seccion-contenedor {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #60a5fa, #a78bfa);
 }
 
 /* Animaciones globales */
@@ -66,8 +50,17 @@
   }
 }
 
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  }
+}
+
 /* Selección de texto personalizada */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: #e2e8f0;
+  background: rgba(255, 0, 0, 0.3);
+  color: #ffffff;
 }
