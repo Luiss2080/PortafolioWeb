@@ -1,7 +1,7 @@
 /* Estilos para la vista de inicio - Tema oscuro/rojo */
 .vista-inicio {
   min-height: calc(100vh - 80px);
-  padding: 4rem 2rem;
+  padding: 0;
   background: #000000;
 }
 
