@@ -1,54 +1,341 @@
 /* Estilos para Header Layout */
 .header-layout {
-  background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
-  padding: 4rem 2rem;
+  background: #000000;
+  padding: 8rem 2rem 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header-layout::before {
-  content: '';
+/* Ondas de fondo animadas */
+.header-ondas {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.header-onda {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  opacity: 0.1;
+  border-radius: 40%;
+}
+
+.header-onda-1 {
+  background: radial-gradient(ellipse at center, #ff0000 0%, transparent 70%);
+  animation: onda 15s infinite linear;
+  top: -50%;
+  left: -50%;
+}
+
+.header-onda-2 {
+  background: radial-gradient(ellipse at center, #cc0000 0%, transparent 70%);
+  animation: onda 20s infinite linear reverse;
+  top: -60%;
+  left: -60%;
+}
+
+.header-onda-3 {
+  background: radial-gradient(ellipse at center, #ff3333 0%, transparent 70%);
+  animation: onda 25s infinite linear;
+  top: -70%;
+  left: -70%;
+}
+
+@keyframes onda {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Partículas flotantes */
+.header-particulas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   pointer-events: none;
 }
 
+.particula {
+  position: absolute;
+  background: #ff0000;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff0000;
+  animation: flotar linear infinite;
+  opacity: 0;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Grid de fondo */
+.header-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Contenido principal */
 .header-contenido {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Título con animación de letras */
+.header-titulo-contenedor {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 .header-titulo {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 4.5rem;
+  font-weight: 900;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  background: linear-gradient(135deg, #ffffff 0%, #ff0000 100%);
+  letter-spacing: 4px;
+  display: inline-block;
+  position: relative;
+  text-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 40px rgba(255, 0, 0, 0.3),
+    0 0 60px rgba(255, 0, 0, 0.2);
+}
+
+.header-letra {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 0%, #ff0000 50%, #ffffff 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: fadeInDown 0.8s ease-out;
+  animation: letraEntrada 0.6s ease-out backwards, brilloTexto 3s ease-in-out infinite;
 }
 
+@keyframes letraEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) rotateX(-90deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes brilloTexto {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Línea decorativa bajo el título */
+.header-titulo-linea {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+  margin: 1rem auto;
+  max-width: 400px;
+  border-radius: 2px;
+  animation: lineaExpansion 1.5s ease-out;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+@keyframes lineaExpansion {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Subtítulo mejorado */
 .header-subtitulo {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  position: relative;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
 
+.header-subtitulo-texto {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: rgba(255, 0, 0, 0.1);
+  border-left: 3px solid #ff0000;
+  border-right: 3px solid #ff0000;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-subtitulo-texto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.3), transparent);
+  animation: barrido 3s ease-in-out infinite;
+}
+
+@keyframes barrido {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+/* Contenido extra */
+.header-contenido-extra {
+  margin-top: 2rem;
+  animation: fadeInUp 1.2s ease-out 0.8s both;
+}
+
+/* Indicador de scroll */
+.header-scroll-indicador {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeInUp 1.5s ease-out 1.2s both;
+}
+
+.scroll-mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 0, 0, 0.8);
+  border-radius: 15px;
+  position: relative;
+  animation: mouseMove 2s ease-in-out infinite;
+}
+
+.scroll-rueda {
+  width: 4px;
+  height: 8px;
+  background: #ff0000;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ruedaScroll 2s ease-in-out infinite;
+}
+
+@keyframes mouseMove {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes ruedaScroll {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+.scroll-texto {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* Efecto de brillo animado */
+.header-brillo {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+  animation: brilloRotar 15s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes brilloRotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animaciones base */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -72,23 +359,51 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header-layout {
-    padding: 3rem 1.5rem;
+    padding: 6rem 2rem 5rem;
+    min-height: 90vh;
   }
 
   .header-titulo {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
   }
 
   .header-subtitulo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-layout {
+    padding: 5rem 1.5rem 4rem;
+    min-height: 80vh;
+  }
+
+  .header-titulo {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .header-subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .header-scroll-indicador {
+    bottom: 2rem;
+  }
+
+  .scroll-mouse {
+    width: 25px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .header-layout {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem 3rem;
+    min-height: 70vh;
   }
 
   .header-titulo {
@@ -97,6 +412,27 @@
   }
 
   .header-subtitulo {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .header-subtitulo-texto {
+    padding: 0.4rem 1rem;
+  }
+
+  .header-scroll-indicador {
+    bottom: 1.5rem;
+    scale: 0.8;
+  }
+
+  .scroll-texto {
+    font-size: 0.75rem;
+  }
+
+  /* Reducir partículas en móviles */
+  .particula:nth-child(n+16) {
+    display: none;
+  }
+}
   }
 }
