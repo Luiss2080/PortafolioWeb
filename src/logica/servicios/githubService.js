@@ -218,7 +218,8 @@ export const obtenerCommitsRecientes = async (nombreRepo, limite = 5) => {
   }
 };
 
-export default {
+// Exportación por defecto con todos los métodos
+const githubService = {
   obtenerPerfil,
   obtenerRepositorios,
   obtenerLenguajesRepo,
@@ -226,3 +227,5 @@ export default {
   obtenerProyectosDestacados,
   obtenerCommitsRecientes
 };
+
+export default githubService;

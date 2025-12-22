@@ -1,5 +1,5 @@
 // Hook personalizado para cargar datos de GitHub
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /**
  * Hook para cargar datos de GitHub con manejo de estados
@@ -11,6 +11,20 @@ export const useGitHub = (fetchFunction, dependencies = []) => {
   const [datos, setDatos] = useState(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
+
+  // Memorizar función de recarga
+  const recargar = useCallback(async () => {
+    try {
+      setCargando(true);
+      setError(null);
+      const resultado = await fetchFunction();
+      setDatos(resultado);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setCargando(false);
+    }
+  }, [fetchFunction]);
 
   useEffect(() => {
     let montado = true;
@@ -42,20 +56,8 @@ export const useGitHub = (fetchFunction, dependencies = []) => {
     return () => {
       montado = false;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
-
-  const recargar = async () => {
-    try {
-      setCargando(true);
-      setError(null);
-      const resultado = await fetchFunction();
-      setDatos(resultado);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setCargando(false);
-    }
-  };
 
   return { datos, cargando, error, recargar };
 };
