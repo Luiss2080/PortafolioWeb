@@ -1,0 +1,91 @@
+/* Estilos para componente Botón */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.boton-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Tipos de botón */
+.boton-primario {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+}
+
+.boton-primario:hover:not(.boton-disabled) {
+  background: #cc0000;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.boton-secundario:hover:not(.boton-disabled) {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.boton-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.boton-outline:hover:not(.boton-disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.boton-ghost {
+  background: transparent;
+  color: #ff0000;
+  border: none;
+}
+
+.boton-ghost:hover:not(.boton-disabled) {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* Tamaños */
+.boton-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.boton-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.boton-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Icono y texto */
+.boton-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-texto {
+  display: flex;
+  align-items: center;
+}

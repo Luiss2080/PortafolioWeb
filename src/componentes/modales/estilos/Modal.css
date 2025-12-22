@@ -1,0 +1,142 @@
+/* Estilos para componente Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-contenedor {
+  background: #111;
+  border: 1px solid #ff0000;
+  border-radius: 12px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 50px rgba(255, 0, 0, 0.3);
+}
+
+/* Tamaños del modal */
+.modal-small {
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-medium {
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-large {
+  max-width: 900px;
+  width: 100%;
+}
+
+.modal-full {
+  max-width: 95vw;
+  width: 100%;
+}
+
+/* Header del modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 1;
+}
+
+.modal-titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.modal-boton-cerrar {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.modal-boton-cerrar:hover {
+  background: rgba(255, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  padding: 1.5rem;
+  color: #fff;
+}
+
+/* Scrollbar personalizado para el modal */
+.modal-contenedor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-contenedor::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-radius: 0 12px 12px 0;
+}
+
+.modal-contenedor::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 4px;
+}
+
+.modal-contenedor::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .modal-contenedor {
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-titulo {
+    font-size: 1.25rem;
+  }
+
+  .modal-contenido {
+    padding: 1rem;
+  }
+
+  .modal-small,
+  .modal-medium,
+  .modal-large,
+  .modal-full {
+    max-width: 100%;
+  }
+}
