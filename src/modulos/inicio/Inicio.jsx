@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaCode, FaStar, FaCodeBranch, FaUsers, FaExternalLinkAlt } from 'react-icons/fa';
 import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
 import Cargador from '../../componentes/animaciones/Cargador.jsx';
-import Header from '../../componentes/layouts/Header.jsx';
+import Hero from './Hero.jsx';
 import { obtenerEstadisticas } from '../../logica/servicios/githubService';
 import { useGitHub } from '../../logica/hooks';
 import './Inicio.css';
@@ -14,7 +14,7 @@ const Inicio = () => {
 
   return (
     <ContenedorAnimado className="vista-inicio" animacion="fadeIn">
-      <Header />
+      <Hero />
       
       <div className="contenido-inicio" style={{ padding: '4rem 2rem' }}>
         {/* Estadísticas */}

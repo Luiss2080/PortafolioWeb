@@ -6,9 +6,9 @@ import { obtenerPerfil } from '../../logica/servicios/githubService';
 import { useGitHub } from '../../logica/hooks';
 import { informacionPersonal } from '../../datos/estaticos/perfil';
 import { REDES_SOCIALES } from '../../configuracion/constantes';
-import './estilos/Header.css';
+import './Hero.css';
 
-const Header = ({ 
+const Hero = ({ 
   titulo, 
   subtitulo, 
   children, 
@@ -221,4 +221,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export default Hero;
