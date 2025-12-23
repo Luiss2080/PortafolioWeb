@@ -87,7 +87,7 @@
 .header-grid-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -125,19 +125,19 @@
 }
 
 .header-titulo {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
 }
 
 .titulo-linea {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .titulo-nombre {
@@ -156,9 +156,9 @@
 }
 
 .header-subtitulo-container {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: #ff0000;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-family: 'Courier New', monospace;
   font-weight: 600;
 }
@@ -168,18 +168,18 @@
 }
 
 .header-descripcion {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   max-width: 500px;
 }
 
 /* Buttons */
 .header-botones {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn-tech {
@@ -282,8 +282,8 @@
 
 .perfil-card-container {
   position: relative;
-  width: 380px;
-  height: 500px;
+  width: 320px;
+  height: 420px;
 }
 
 /* Tech Rings */
