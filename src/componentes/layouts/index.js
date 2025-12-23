@@ -1,5 +1,4 @@
 // Exportaciones de componentes de layout
-export { default as Header } from './Header';
 export { default as BarraNavegacion } from './BarraNavegacion';
 export { default as PiePagina } from './PiePagina';
 export { default as Section } from './Section';
