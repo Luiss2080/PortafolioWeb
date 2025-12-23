@@ -26,9 +26,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="seccion-pie">
-          <h4 className="subtitulo-pie">Redes Sociales</h4>
-          <div className="iconos-redes">
+        <div className="footer-section">
+          <h4 className="footer-subtitle">Redes Sociales</h4>
+          <div className="footer-social">
             <a href={REDES_SOCIALES.GITHUB} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="copyright">
+      <div className="footer-copyright">
         <p>&copy; {añoActual} Luiss.dev. Todos los derechos reservados.</p>
       </div>
     </footer>
