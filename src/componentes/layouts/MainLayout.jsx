@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import BarraNavegacion from './BarraNavegacion';
-import PiePagina from './PiePagina';
+import Header from './Header';
+import Footer from './Footer';
 import { RUTAS } from '../../configuracion/rutas';
 import './estilos/MainLayout.css';
 
@@ -11,13 +11,13 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className="layout-principal">
-      <BarraNavegacion />
+      <Header />
       
       <main className={`layout-contenido ${!esInicio ? 'con-espaciado-superior' : ''}`}>
         {children}
       </main>
 
-      <PiePagina />
+      <Footer />
     </div>
   );
 };

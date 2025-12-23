@@ -1,5 +1,5 @@
-/* Estilos para la barra de navegación - Tema oscuro/rojo */
-.barra-navegacion {
+/* Estilos para el Header - Tema oscuro/rojo */
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,12 +12,12 @@
   border-bottom: 1px solid rgba(255, 0, 0, 0.1);
 }
 
-.barra-navegacion.con-sombra {
+.header.con-sombra {
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
   border-bottom-color: rgba(255, 0, 0, 0.3);
 }
 
-.contenedor-navegacion {
+.header-container {
   max-width: 1600px; /* Ancho aumentado */
   margin: 0 auto;
   padding: 0 2rem;

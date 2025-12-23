@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { RUTAS_ARRAY } from '../../configuracion/rutas';
 import { useAnimacionScroll } from '../../logica/hooks/useAnimacionScroll';
-import './estilos/BarraNavegacion.css';
+import './estilos/Header.css';
 
-const BarraNavegacion = () => {
+const Header = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
   const { scrollY } = useAnimacionScroll();
 
@@ -16,12 +16,12 @@ const BarraNavegacion = () => {
 
   return (
     <motion.nav
-      className={`barra-navegacion ${scrollY > 50 ? 'con-sombra' : ''}`}
+      className={`header ${scrollY > 50 ? 'con-sombra' : ''}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="contenedor-navegacion">
+      <div className="header-container">
         <Link to="/" className="logo">
           <span className="logo-texto">Luiss.dev</span>
         </Link>
@@ -34,12 +34,12 @@ const BarraNavegacion = () => {
           <span className={`icono-hamburguesa ${menuAbierto ? 'abierto' : ''}`}></span>
         </button>
 
-        <div className={`menu-navegacion ${menuAbierto ? 'menu-abierto' : ''}`}>
+        <div className={`header-menu ${menuAbierto ? 'menu-abierto' : ''}`}>
           {RUTAS_ARRAY.map((ruta, index) => (
             <Link
               key={ruta.path}
               to={ruta.path}
-              className="enlace-navegacion"
+              className="header-link"
               onClick={() => setMenuAbierto(false)}
             >
               <motion.span
@@ -57,4 +57,4 @@ const BarraNavegacion = () => {
   );
 };
 
-export default BarraNavegacion;
+export default Header;

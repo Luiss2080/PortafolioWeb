@@ -2,24 +2,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { REDES_SOCIALES } from '../../configuracion/constantes';
-import './estilos/PiePagina.css';
+import './estilos/Footer.css';
 
-const PiePagina = () => {
+const Footer = () => {
   const añoActual = new Date().getFullYear();
 
   return (
-    <footer className="pie-pagina">
-      <div className="contenedor-pie">
-        <div className="seccion-pie">
-          <h3 className="titulo-seccion">Luiss.dev</h3>
-          <p className="descripcion-pie">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-section">
+          <h3 className="footer-title">Luiss.dev</h3>
+          <p className="footer-description">
             Portfolio profesional de desarrollo web
           </p>
         </div>
 
-        <div className="seccion-pie">
-          <h4 className="subtitulo-pie">Enlaces</h4>
-          <ul className="lista-enlaces">
+        <div className="footer-section">
+          <h4 className="footer-subtitle">Enlaces</h4>
+          <ul className="footer-links">
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/proyectos">Proyectos</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
@@ -49,4 +49,4 @@ const PiePagina = () => {
   );
 };
 
-export default PiePagina;
+export default Footer;
