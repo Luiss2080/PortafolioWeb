@@ -1,7 +1,7 @@
-/* Tarjeta de Proyecto - Estilo GitHub Dashboard */
+/* Tarjeta de Proyecto - Tech Style (Blue) */
 .tarjeta-proyecto {
-  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 1px solid #ff0000;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -10,7 +10,7 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .tarjeta-proyecto::before {
@@ -22,7 +22,7 @@
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    #ff0000 50%, 
+    #60a5fa 50%, 
     transparent 100%
   );
   opacity: 0;
@@ -30,11 +30,12 @@
 }
 
 .tarjeta-proyecto:hover {
-  border-color: #ff3333;
+  border-color: rgba(96, 165, 250, 0.5);
   box-shadow: 
-    0 8px 16px rgba(255, 0, 0, 0.2),
-    0 0 20px rgba(255, 0, 0, 0.1);
-  transform: translateY(-2px);
+    0 8px 16px rgba(59, 130, 246, 0.1),
+    0 0 20px rgba(59, 130, 246, 0.05);
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.7);
 }
 
 .tarjeta-proyecto:hover::before {
@@ -47,17 +48,17 @@
   align-items: center;
   gap: 8px;
   font-size: 0.75rem;
-  color: #888;
-  font-family: 'Consolas', 'Monaco', monospace;
+  color: #94a3b8;
+  font-family: 'Fira Code', monospace;
 }
 
 .punto-verde {
   width: 8px;
   height: 8px;
-  background: #00ff00;
+  background: #10b981;
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 8px #00ff00;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
   animation: pulso 2s infinite;
 }
 
@@ -77,19 +78,19 @@
 .titulo-proyecto {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #e2e8f0;
   margin: 0;
   letter-spacing: 0.5px;
   transition: color 0.2s;
 }
 
 .tarjeta-proyecto:hover .titulo-proyecto {
-  color: #ff3333;
+  color: #60a5fa;
 }
 
 .descripcion-proyecto {
   font-size: 0.9rem;
-  color: #b0b0b0;
+  color: #cbd5e1;
   line-height: 1.5;
   margin: 0;
   display: -webkit-box;
@@ -98,158 +99,60 @@
   overflow: hidden;
 }
 
-/* Lenguaje badge */
+/* Badges */
 .lenguaje-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
-  color: #ccc;
-  padding: 4px 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
 .lenguaje-punto {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: #ff0000;
-  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  background-color: #60a5fa;
 }
 
-/* Tecnologías/Temas */
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 6px;
 }
 
 .badge-tecnologia {
-  padding: 4px 12px;
-  background: rgba(255, 0, 0, 0.1);
-  border: 1px solid rgba(255, 0, 0, 0.3);
-  border-radius: 16px;
   font-size: 0.75rem;
-  color: #ff6666;
-  font-weight: 500;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.badge-tecnologia:hover {
-  background: rgba(255, 0, 0, 0.2);
-  border-color: rgba(255, 0, 0, 0.5);
+  padding: 2px 8px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .badge-tecnologia.mas {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #999;
+  background: rgba(148, 163, 184, 0.1);
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.2);
 }
 
-/* Estadísticas */
+/* Estad�sticas */
 .estadisticas-proyecto {
   display: flex;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .stat {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   font-size: 0.85rem;
-  color: #999;
+  color: #94a3b8;
 }
 
 .stat svg {
-  fill: #999;
-  transition: fill 0.2s;
-}
-
-.stat:hover svg {
-  fill: #ff0000;
-}
-
-/* Acciones */
-.acciones-proyecto {
-  display: flex;
-  gap: 8px;
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.boton-proyecto {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: rgba(255, 0, 0, 0.1);
-  border: 1px solid rgba(255, 0, 0, 0.3);
-  border-radius: 6px;
-  color: #ff6666;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-family: 'Consolas', 'Monaco', monospace;
-  transition: all 0.2s;
-}
-
-.boton-proyecto:hover {
-  background: rgba(255, 0, 0, 0.2);
-  border-color: #ff0000;
-  color: #ff3333;
-  transform: translateX(2px);
-}
-
-.boton-proyecto svg {
-  fill: currentColor;
-}
-
-.boton-demo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  color: #999;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.boton-demo:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-.boton-demo svg {
-  fill: currentColor;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .tarjeta-proyecto {
-    padding: 16px;
-  }
-
-  .titulo-proyecto {
-    font-size: 1.1rem;
-  }
-
-  .descripcion-proyecto {
-    font-size: 0.85rem;
-  }
-
-  .tecnologias {
-    gap: 6px;
-  }
-
-  .badge-tecnologia {
-    font-size: 0.7rem;
-    padding: 3px 10px;
-  }
+  color: #60a5fa;
 }

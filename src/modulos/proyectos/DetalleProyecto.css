@@ -1,10 +1,10 @@
-/* Estilos para vista de Detalle de Proyecto */
+/* Estilos para vista de Detalle de Proyecto - Tech Style (Blue) */
 
 .vista-detalle-proyecto {
   min-height: calc(100vh - 120px);
   padding: 2rem 0;
-  background: #000;
-  color: #fff;
+  background: transparent;
+  color: #e2e8f0;
 }
 
 .contenedor-detalle {
@@ -15,13 +15,14 @@
 
 /* Header del proyecto */
 .header-proyecto {
-  background: linear-gradient(135deg, #111 0%, #1a0000 100%);
-  border: 1px solid #ff0000;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   padding: 3rem;
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .header-proyecto::before {
@@ -31,13 +32,13 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #ff0000, #ff5555);
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
 }
 
 .boton-volver-simple {
-  background: rgba(255, 0, 0, 0.1);
-  border: 1px solid #ff0000;
-  color: #ff0000;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
@@ -50,14 +51,14 @@
 }
 
 .boton-volver-simple:hover {
-  background: rgba(255, 0, 0, 0.2);
+  background: rgba(59, 130, 246, 0.2);
   transform: translateX(-5px);
 }
 
 .titulo-proyecto {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff, #ff0000);
+  background: linear-gradient(135deg, #ffffff, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,13 +67,13 @@
 
 .descripcion-proyecto {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #cbd5e1;
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 800px;
 }
 
-/* Estadísticas header */
+/* Estad�sticas header */
 .estadisticas-header {
   display: flex;
   gap: 2rem;
@@ -86,310 +87,209 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: rgba(255, 0, 0, 0.05);
-  border: 1px solid rgba(255, 0, 0, 0.2);
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 8px;
   min-width: 120px;
 }
 
 .icono-stat {
-  color: #ff0000;
+  color: #60a5fa;
   font-size: 1.5rem;
 }
 
 .stat-item > span:nth-child(2) {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #e2e8f0;
 }
 
-.label-stat {
-  font-size: 0.85rem;
-  color: #999;
+.stat-item > span:nth-child(3) {
+  font-size: 0.8rem;
+  color: #94a3b8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Acciones del proyecto */
-.acciones-proyecto {
+/* Enlaces */
+.enlaces-proyecto {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.boton-accion {
+.boton-enlace {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  background: #ff0000;
-  color: #fff;
-  border: none;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.boton-accion:hover {
-  background: #cc0000;
+.boton-enlace.principal {
+  background: #3b82f6;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+}
+
+.boton-enlace.principal:hover {
+  background: #2563eb;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-.boton-accion.secundario {
-  background: transparent;
-  border: 1px solid #ff0000;
-  color: #ff0000;
+.boton-enlace.secundario {
+  background: rgba(30, 41, 59, 0.5);
+  color: #e2e8f0;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-.boton-accion.secundario:hover {
-  background: rgba(255, 0, 0, 0.1);
+.boton-enlace.secundario:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #60a5fa;
+  transform: translateY(-2px);
 }
 
-/* Grid de información */
-.grid-informacion {
+/* Contenido principal */
+.contenido-principal {
   display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  grid-template-columns: 1fr;
 }
 
-.titulo-seccion {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* README */
-.seccion-readme {
-  background: #111;
-  border: 1px solid #333;
+.seccion-detalle {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
 }
 
-.contenido-readme {
-  background: #0a0a0a;
-  border: 1px solid #222;
-  border-radius: 8px;
-  padding: 1.5rem;
+.seccion-detalle h3 {
+  color: #60a5fa;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  padding-bottom: 1rem;
+}
+
+.readme-content {
+  color: #cbd5e1;
+  line-height: 1.7;
   overflow-x: auto;
 }
 
-.contenido-readme pre {
-  color: #ccc;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.readme-content h1,
+.readme-content h2,
+.readme-content h3 {
+  color: #e2e8f0;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Tecnologías */
-.seccion-tecnologias {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
+.readme-content a {
+  color: #60a5fa;
+  text-decoration: none;
 }
 
-.grid-tecnologias {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+.readme-content code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+  color: #e2e8f0;
 }
 
-.badge-tecnologia {
-  background: rgba(255, 0, 0, 0.1);
-  border: 1px solid #ff0000;
-  color: #ff0000;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.readme-content pre {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-.badge-tecnologia:hover {
-  background: rgba(255, 0, 0, 0.2);
-  transform: translateY(-2px);
+.readme-content pre code {
+  background: transparent;
+  padding: 0;
+  color: #cbd5e1;
 }
 
-/* Commits */
-.seccion-commits {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
+.readme-content img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
+/* Sidebar */
 .lista-commits {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .commit-item {
-  display: flex;
-  gap: 1rem;
   padding: 1rem;
-  background: #0a0a0a;
-  border: 1px solid #222;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  transition: background 0.2s;
+}
+
+.commit-item:last-child {
+  border-bottom: none;
 }
 
 .commit-item:hover {
-  border-color: #ff0000;
-  transform: translateX(5px);
-}
-
-.commit-avatar {
-  flex-shrink: 0;
-}
-
-.commit-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #ff0000;
-}
-
-.commit-info {
-  flex: 1;
+  background: rgba(59, 130, 246, 0.05);
 }
 
 .commit-mensaje {
-  color: #fff;
+  display: block;
+  color: #e2e8f0;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 .commit-meta {
-  color: #999;
-  font-size: 0.85rem;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
-.icono-inline {
-  color: #ff0000;
-}
-
-/* Información adicional */
-.seccion-info-adicional {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: #0a0a0a;
-  border: 1px solid #222;
-  border-radius: 8px;
-}
-
-.info-label {
-  color: #999;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.info-valor {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Error */
-.error-contenedor {
-  text-align: center;
-  padding: 4rem 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.error-contenedor h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ff0000;
-}
-
-.error-contenedor p {
-  color: #ccc;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-.boton-volver {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  background: #ff0000;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.boton-volver:hover {
-  background: #cc0000;
-  transform: translateY(-2px);
+.commit-autor {
+  color: #60a5fa;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .contenido-principal {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
-  .contenedor-detalle {
-    padding: 0 1rem;
-  }
-
   .header-proyecto {
-    padding: 2rem 1.5rem;
+    padding: 2rem;
   }
-
+  
   .titulo-proyecto {
     font-size: 2rem;
   }
-
-  .descripcion-proyecto {
-    font-size: 1rem;
-  }
-
+  
   .estadisticas-header {
     gap: 1rem;
   }
-
+  
   .stat-item {
-    padding: 0.75rem 1rem;
-    min-width: 100px;
-  }
-
-  .stat-item > span:nth-child(2) {
-    font-size: 1.5rem;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
+    flex: 1;
+    padding: 0.75rem;
+    min-width: auto;
   }
 }

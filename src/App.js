@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BarraNavegacion from './componentes/navegacion/BarraNavegacion.jsx';
-import PiePagina from './componentes/navegacion/PiePagina.jsx';
+import BarraNavegacion from './componentes/layouts/BarraNavegacion.jsx';
+import PiePagina from './componentes/layouts/PiePagina.jsx';
 import { Inicio } from './modulos/inicio';
 import { SobreMi } from './modulos/sobre-mi';
 import { Proyectos, DetalleProyecto } from './modulos/proyectos';
