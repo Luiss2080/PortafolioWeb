@@ -1,14 +1,16 @@
 /* Header Layout - Modern Tech Style */
 .header-layout {
   background: #0a0a0a;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Ajuste para descontar el header fijo */
+  min-height: calc(100dvh - 80px); /* Soporte móvil */
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  padding-top: 80px; /* Space for navbar */
+  padding-top: 0; /* El padding ya viene del contenedor principal */
+  padding-bottom: 0;
 }
 
 /* Background Effects */
