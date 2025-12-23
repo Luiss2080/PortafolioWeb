@@ -1,4 +1,4 @@
-/* Estilos para la vista de proyectos - Tech Style (Blue) */
+/* Estilos para la vista de proyectos - Tech Style (Red) */
 .vista-proyectos {
   min-height: calc(100vh - 80px);
   padding: 4rem 2rem;
@@ -16,50 +16,65 @@
 .contenedor-error {
   text-align: center;
   padding: 3rem;
-  background: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(239, 68, 68, 0.5);
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 0, 0, 0.3);
   border-radius: 12px;
   max-width: 500px;
   backdrop-filter: blur(10px);
 }
 
 .contenedor-error h2 {
-  color: #ef4444;
+  color: #ff0000;
   margin-bottom: 1rem;
 }
 
 .contenedor-error p {
-  color: #cbd5e1;
+  color: #a0a0a0;
   margin-bottom: 2rem;
 }
 
 .boton-reintentar {
   padding: 0.75rem 2rem;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid #ef4444;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
   border-radius: 6px;
-  color: #ef4444;
+  color: #ff0000;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .boton-reintentar:hover {
-  background: rgba(239, 68, 68, 0.2);
+  background: rgba(255, 0, 0, 0.2);
   transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
 }
 
 .contenedor-proyectos {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1600px; /* Ancho aumentado */
   margin: 0 auto;
 }
 
 /* Header */
 .header-seccion {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-seccion::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 .titulo-wrapper {
@@ -72,28 +87,32 @@
 }
 
 .titulo-seccion {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #e2e8f0;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .icono-proyectos {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #ff0000;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
 }
 
 .contador-proyectos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 0.5rem 1rem;
-  min-width: 80px;
+  padding: 0.5rem 1.5rem;
+  min-width: 100px;
 }
 
 .contador-proyectos .numero {

@@ -1,4 +1,4 @@
-/* Estilos para vista de Detalle de Proyecto - Tech Style (Blue) */
+/* Estilos para vista de Detalle de Proyecto - Tech Style (Red) */
 
 .vista-detalle-proyecto {
   min-height: calc(100vh - 120px);
@@ -8,15 +8,16 @@
 }
 
 .contenedor-detalle {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1600px; /* Ancho aumentado */
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 /* Header del proyecto */
 .header-proyecto {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(255, 0, 0, 0.2);
   border-radius: 12px;
   padding: 3rem;
   margin-bottom: 2rem;
@@ -32,13 +33,13 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  background: linear-gradient(90deg, #ff0000, #cc0000);
 }
 
 .boton-volver-simple {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  color: #60a5fa;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff0000;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
@@ -73,7 +74,7 @@
   max-width: 800px;
 }
 
-/* Estadísticas header */
+/* Estadï¿½sticas header */
 .estadisticas-header {
   display: flex;
   gap: 2rem;

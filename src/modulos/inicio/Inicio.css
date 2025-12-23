@@ -1,13 +1,13 @@
 /* Estilos para la vista de inicio - Tema oscuro/rojo */
 .vista-inicio {
-  min-height: 100vh;
+  width: 100%;
   padding: 0;
   background: #0a0a0a;
   position: relative;
 }
 
 .contenido-inicio {
-  max-width: 1200px;
+  max-width: 1600px; /* Ancho aumentado */
   margin: 0 auto;
   display: flex;
   flex-direction: column;

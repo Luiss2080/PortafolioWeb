@@ -9,13 +9,16 @@
 
 .contenido-principal {
   flex: 1;
-  padding-top: 80px;
   background: #000000;
+}
+
+.contenido-principal.con-padding {
+  padding-top: 80px;
 }
 
 /* Utilidades globales */
 .seccion-contenedor {
-  max-width: 1400px;
+  max-width: 1600px; /* Ancho aumentado */
   margin: 0 auto;
   padding: 0 2rem;
 }

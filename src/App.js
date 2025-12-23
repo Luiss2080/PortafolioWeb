@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import BarraNavegacion from './componentes/layouts/BarraNavegacion.jsx';
 import PiePagina from './componentes/layouts/PiePagina.jsx';
 import { Inicio } from './modulos/inicio';
@@ -16,12 +16,14 @@ import './App.css';
 function AppContent() {
   // Scroll automático al tope en cada cambio de ruta
   useScrollToTop();
+  const location = useLocation();
+  const esInicio = location.pathname === RUTAS.INICIO;
 
   return (
     <div className="app-contenedor">
       <BarraNavegacion />
       
-      <main className="contenido-principal">
+      <main className={`contenido-principal ${!esInicio ? 'con-padding' : ''}`}>
         <Routes>
           <Route path={RUTAS.INICIO} element={<Inicio />} />
           <Route path={RUTAS.SOBRE_MI} element={<SobreMi />} />
