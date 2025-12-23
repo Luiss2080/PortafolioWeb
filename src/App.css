@@ -1,24 +1,8 @@
-/* Estilos principales de la aplicación - Tema oscuro/rojo */
-.app-contenedor {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  background: #000000;
-}
-
-.contenido-principal {
-  flex: 1;
-  background: #000000;
-}
-
-.contenido-principal.con-padding {
-  padding-top: 80px;
-}
+/* Estilos globales de la aplicación */
 
 /* Utilidades globales */
 .seccion-contenedor {
-  max-width: 1600px; /* Ancho aumentado */
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
 }

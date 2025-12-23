@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import BarraNavegacion from './componentes/layouts/BarraNavegacion.jsx';
-import PiePagina from './componentes/layouts/PiePagina.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MainLayout } from './componentes/layouts';
 import { Inicio } from './modulos/inicio';
 import { SobreMi } from './modulos/sobre-mi';
 import { Proyectos, DetalleProyecto } from './modulos/proyectos';
@@ -12,18 +11,17 @@ import { RUTAS } from './configuracion/rutas';
 import { useScrollToTop } from './logica/hooks';
 import './App.css';
 
-// Componente interno que usa el hook dentro del Router
-function AppContent() {
-  // Scroll automático al tope en cada cambio de ruta
+// Componente para manejar el scroll
+function ScrollHandler() {
   useScrollToTop();
-  const location = useLocation();
-  const esInicio = location.pathname === RUTAS.INICIO;
+  return null;
+}
 
+function App() {
   return (
-    <div className="app-contenedor">
-      <BarraNavegacion />
-      
-      <main className={`contenido-principal ${!esInicio ? 'con-padding' : ''}`}>
+    <Router>
+      <ScrollHandler />
+      <MainLayout>
         <Routes>
           <Route path={RUTAS.INICIO} element={<Inicio />} />
           <Route path={RUTAS.SOBRE_MI} element={<SobreMi />} />
@@ -33,17 +31,7 @@ function AppContent() {
           <Route path={RUTAS.EXPERIENCIA} element={<Experiencia />} />
           <Route path={RUTAS.CONTACTO} element={<Contacto />} />
         </Routes>
-      </main>
-
-      <PiePagina />
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <AppContent />
+      </MainLayout>
     </Router>
   );
 }
