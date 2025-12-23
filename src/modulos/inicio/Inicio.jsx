@@ -1,6 +1,7 @@
 // Vista de Inicio/Home - Con estadísticas de GitHub
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaCode, FaStar, FaCodeBranch, FaUsers, FaExternalLinkAlt } from 'react-icons/fa';
 import ContenedorAnimado from '../../componentes/animaciones/ContenedorAnimado.jsx';
 import Cargador from '../../componentes/animaciones/Cargador.jsx';
 import Header from '../../componentes/layouts/Header.jsx';
@@ -30,25 +31,25 @@ const Inicio = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <div className="stat-card">
-                <div className="stat-icono"></div>
+                <div className="stat-icono"><FaCode /></div>
                 <div className="stat-valor">{estadisticas.totalRepositorios}</div>
                 <div className="stat-label">Repositorios</div>
               </div>
 
               <div className="stat-card destacado">
-                <div className="stat-icono"></div>
+                <div className="stat-icono"><FaStar /></div>
                 <div className="stat-valor">{estadisticas.totalEstrellas}</div>
                 <div className="stat-label">Total Estrellas</div>
               </div>
 
               <div className="stat-card">
-                <div className="stat-icono"></div>
+                <div className="stat-icono"><FaCodeBranch /></div>
                 <div className="stat-valor">{estadisticas.totalForks}</div>
                 <div className="stat-label">Total Forks</div>
               </div>
 
               <div className="stat-card">
-                <div className="stat-icono"></div>
+                <div className="stat-icono"><FaUsers /></div>
                 <div className="stat-valor">{estadisticas.seguidores}</div>
                 <div className="stat-label">Seguidores</div>
               </div>
@@ -62,7 +63,10 @@ const Inicio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                <h3 className="seccion-titulo">Lenguajes más usados</h3>
+                <h3 className="seccion-titulo">
+                  <span className="titulo-icono"><FaCode /></span>
+                  Lenguajes más usados
+                </h3>
                 <div className="lenguajes-lista">
                   {estadisticas.lenguajesPrincipales.map((item, index) => (
                     <div key={index} className="lenguaje-item">
@@ -92,7 +96,10 @@ const Inicio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
               >
-                <h3 className="seccion-titulo"> Proyecto más popular</h3>
+                <h3 className="seccion-titulo">
+                  <span className="titulo-icono"><FaStar /></span>
+                  Proyecto más popular
+                </h3>
                 <a 
                   href={estadisticas.repositorioMasEstrellado.url}
                   target="_blank"
@@ -102,8 +109,9 @@ const Inicio = () => {
                   <div className="proyecto-header">
                     <h4>{estadisticas.repositorioMasEstrellado.nombre}</h4>
                     <div className="proyecto-stats-mini">
-                      <span> {estadisticas.repositorioMasEstrellado.estrellas}</span>
-                      <span> {estadisticas.repositorioMasEstrellado.forks}</span>
+                      <span><FaStar /> {estadisticas.repositorioMasEstrellado.estrellas}</span>
+                      <span><FaCodeBranch /> {estadisticas.repositorioMasEstrellado.forks}</span>
+                      <FaExternalLinkAlt className="link-icon" />
                     </div>
                   </div>
                   <p>{estadisticas.repositorioMasEstrellado.descripcion || 'Sin descripción'}</p>

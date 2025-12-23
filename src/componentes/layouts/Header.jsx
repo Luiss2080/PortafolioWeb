@@ -1,6 +1,7 @@
 // Componente Header principal del portafolio
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { obtenerPerfil } from '../../logica/servicios/githubService';
 import { useGitHub } from '../../logica/hooks';
 import { informacionPersonal } from '../../datos/estaticos/perfil';
@@ -19,6 +20,13 @@ const Header = ({
   const [particulas, setParticulas] = useState([]);
   const [typedText, setTypedText] = useState('');
   const { datos: perfilGithub, cargando } = useGitHub(obtenerPerfil);
+
+  const socialIcons = {
+    GITHUB: <FaGithub size={20} />,
+    LINKEDIN: <FaLinkedin size={20} />,
+    TWITTER: <FaTwitter size={20} />,
+    EMAIL: <FaEnvelope size={20} />
+  };
 
   // Combinar datos de GitHub con datos estáticos
   const perfil = {
@@ -134,13 +142,14 @@ const Header = ({
               {Object.entries(REDES_SOCIALES).map(([red, url]) => (
                 <a 
                   key={red} 
-                  href={url} 
+                  href={red === 'EMAIL' ? `mailto:${url}` : url} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-link"
                   aria-label={red}
                 >
-                  {red}
+                  {socialIcons[red]}
+                  <span className="social-text">{red}</span>
                 </a>
               ))}
             </div>
